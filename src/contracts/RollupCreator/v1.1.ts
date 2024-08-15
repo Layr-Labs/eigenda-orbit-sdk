@@ -10,195 +10,472 @@
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x06E341073b2749e0Bb9912461351f716DeCDa9b0)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xf1adF8A2539f342103656599a4F185e2a6B699e5)
  */
 export const rollupCreatorABI = [
-  { stateMutability: 'nonpayable', type: 'constructor', inputs: [] },
   {
-    type: 'event',
-    anonymous: false,
-    inputs: [
-      { name: 'previousOwner', internalType: 'address', type: 'address', indexed: true },
-      { name: 'newOwner', internalType: 'address', type: 'address', indexed: true },
-    ],
-    name: 'OwnershipTransferred',
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
   },
   {
-    type: 'event',
-    anonymous: false,
-    inputs: [
-      { name: 'rollupAddress', internalType: 'address', type: 'address', indexed: true },
-      { name: 'nativeToken', internalType: 'address', type: 'address', indexed: true },
-      { name: 'inboxAddress', internalType: 'address', type: 'address', indexed: false },
-      { name: 'outbox', internalType: 'address', type: 'address', indexed: false },
-      { name: 'rollupEventInbox', internalType: 'address', type: 'address', indexed: false },
-      { name: 'challengeManager', internalType: 'address', type: 'address', indexed: false },
-      { name: 'adminProxy', internalType: 'address', type: 'address', indexed: false },
-      { name: 'sequencerInbox', internalType: 'address', type: 'address', indexed: false },
-      { name: 'bridge', internalType: 'address', type: 'address', indexed: false },
-      { name: 'upgradeExecutor', internalType: 'address', type: 'address', indexed: false },
-      { name: 'validatorUtils', internalType: 'address', type: 'address', indexed: false },
-      { name: 'validatorWalletCreator', internalType: 'address', type: 'address', indexed: false },
-    ],
-    name: 'RollupCreated',
-  },
-  { type: 'event', anonymous: false, inputs: [], name: 'TemplatesUpdated' },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'bridgeCreator',
-    outputs: [{ name: '', internalType: 'contract BridgeCreator', type: 'address' }],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'challengeManagerTemplate',
-    outputs: [{ name: '', internalType: 'contract IChallengeManager', type: 'address' }],
-  },
-  {
-    stateMutability: 'payable',
-    type: 'function',
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        name: 'deployParams',
-        internalType: 'struct RollupCreator.RollupDeploymentParams',
-        type: 'tuple',
-        components: [
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "rollupAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "nativeToken",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "inboxAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "outbox",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "rollupEventInbox",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "challengeManager",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "adminProxy",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "sequencerInbox",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "bridge",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "upgradeExecutor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "validatorUtils",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "validatorWalletCreator",
+        "type": "address"
+      }
+    ],
+    "name": "RollupCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "TemplatesUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "bridgeCreator",
+    "outputs": [
+      {
+        "internalType": "contract BridgeCreator",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "challengeManagerTemplate",
+    "outputs": [
+      {
+        "internalType": "contract IChallengeManager",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
           {
-            name: 'config',
-            internalType: 'struct Config',
-            type: 'tuple',
-            components: [
-              { name: 'confirmPeriodBlocks', internalType: 'uint64', type: 'uint64' },
-              { name: 'extraChallengeTimeBlocks', internalType: 'uint64', type: 'uint64' },
-              { name: 'stakeToken', internalType: 'address', type: 'address' },
-              { name: 'baseStake', internalType: 'uint256', type: 'uint256' },
-              { name: 'wasmModuleRoot', internalType: 'bytes32', type: 'bytes32' },
-              { name: 'owner', internalType: 'address', type: 'address' },
-              { name: 'loserStakeEscrow', internalType: 'address', type: 'address' },
-              { name: 'chainId', internalType: 'uint256', type: 'uint256' },
-              { name: 'chainConfig', internalType: 'string', type: 'string' },
-              { name: 'genesisBlockNum', internalType: 'uint64', type: 'uint64' },
+            "components": [
               {
-                name: 'sequencerInboxMaxTimeVariation',
-                internalType: 'struct ISequencerInbox.MaxTimeVariation',
-                type: 'tuple',
-                components: [
-                  { name: 'delayBlocks', internalType: 'uint256', type: 'uint256' },
-                  { name: 'futureBlocks', internalType: 'uint256', type: 'uint256' },
-                  { name: 'delaySeconds', internalType: 'uint256', type: 'uint256' },
-                  { name: 'futureSeconds', internalType: 'uint256', type: 'uint256' },
-                ],
+                "internalType": "uint64",
+                "name": "confirmPeriodBlocks",
+                "type": "uint64"
               },
+              {
+                "internalType": "uint64",
+                "name": "extraChallengeTimeBlocks",
+                "type": "uint64"
+              },
+              {
+                "internalType": "address",
+                "name": "stakeToken",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "baseStake",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "wasmModuleRoot",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "loserStakeEscrow",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "chainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "chainConfig",
+                "type": "string"
+              },
+              {
+                "internalType": "uint64",
+                "name": "genesisBlockNum",
+                "type": "uint64"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "uint256",
+                    "name": "delayBlocks",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "futureBlocks",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "delaySeconds",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "futureSeconds",
+                    "type": "uint256"
+                  }
+                ],
+                "internalType": "struct ISequencerInbox.MaxTimeVariation",
+                "name": "sequencerInboxMaxTimeVariation",
+                "type": "tuple"
+              }
             ],
+            "internalType": "struct Config",
+            "name": "config",
+            "type": "tuple"
           },
-          { name: 'batchPoster', internalType: 'address', type: 'address' },
-          { name: 'validators', internalType: 'address[]', type: 'address[]' },
-          { name: 'maxDataSize', internalType: 'uint256', type: 'uint256' },
-          { name: 'nativeToken', internalType: 'address', type: 'address' },
-          { name: 'deployFactoriesToL2', internalType: 'bool', type: 'bool' },
-          { name: 'maxFeePerGasForRetryables', internalType: 'uint256', type: 'uint256' },
+          {
+            "internalType": "address[]",
+            "name": "validators",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxDataSize",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "nativeToken",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "deployFactoriesToL2",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxFeePerGasForRetryables",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address[]",
+            "name": "batchPosters",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "batchPosterManager",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "eigenDARollupManager",
+            "type": "address"
+          }
         ],
-      },
+        "internalType": "struct RollupCreator.RollupDeploymentParams",
+        "name": "deployParams",
+        "type": "tuple"
+      }
     ],
-    name: 'createRollup',
-    outputs: [{ name: '', internalType: 'address', type: 'address' }],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'l2FactoriesDeployer',
-    outputs: [{ name: '', internalType: 'contract DeployHelper', type: 'address' }],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'osp',
-    outputs: [{ name: '', internalType: 'contract IOneStepProofEntry', type: 'address' }],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'owner',
-    outputs: [{ name: '', internalType: 'address', type: 'address' }],
-  },
-  {
-    stateMutability: 'nonpayable',
-    type: 'function',
-    inputs: [],
-    name: 'renounceOwnership',
-    outputs: [],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'rollupAdminLogic',
-    outputs: [{ name: '', internalType: 'contract IRollupAdmin', type: 'address' }],
-  },
-  {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'rollupUserLogic',
-    outputs: [{ name: '', internalType: 'contract IRollupUser', type: 'address' }],
-  },
-  {
-    stateMutability: 'nonpayable',
-    type: 'function',
-    inputs: [
-      { name: '_bridgeCreator', internalType: 'contract BridgeCreator', type: 'address' },
-      { name: '_osp', internalType: 'contract IOneStepProofEntry', type: 'address' },
+    "name": "createRollup",
+    "outputs": [
       {
-        name: '_challengeManagerLogic',
-        internalType: 'contract IChallengeManager',
-        type: 'address',
-      },
-      { name: '_rollupAdminLogic', internalType: 'contract IRollupAdmin', type: 'address' },
-      { name: '_rollupUserLogic', internalType: 'contract IRollupUser', type: 'address' },
-      { name: '_upgradeExecutorLogic', internalType: 'contract IUpgradeExecutor', type: 'address' },
-      { name: '_validatorUtils', internalType: 'address', type: 'address' },
-      { name: '_validatorWalletCreator', internalType: 'address', type: 'address' },
-      { name: '_l2FactoriesDeployer', internalType: 'contract DeployHelper', type: 'address' },
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
     ],
-    name: 'setTemplates',
-    outputs: [],
+    "stateMutability": "payable",
+    "type": "function"
   },
   {
-    stateMutability: 'nonpayable',
-    type: 'function',
-    inputs: [{ name: 'newOwner', internalType: 'address', type: 'address' }],
-    name: 'transferOwnership',
-    outputs: [],
+    "inputs": [],
+    "name": "l2FactoriesDeployer",
+    "outputs": [
+      {
+        "internalType": "contract DeployHelper",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'upgradeExecutorLogic',
-    outputs: [{ name: '', internalType: 'contract IUpgradeExecutor', type: 'address' }],
+    "inputs": [],
+    "name": "osp",
+    "outputs": [
+      {
+        "internalType": "contract IOneStepProofEntry",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'validatorUtils',
-    outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    stateMutability: 'view',
-    type: 'function',
-    inputs: [],
-    name: 'validatorWalletCreator',
-    outputs: [{ name: '', internalType: 'address', type: 'address' }],
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
-  { stateMutability: 'payable', type: 'receive' },
+  {
+    "inputs": [],
+    "name": "rollupAdminLogic",
+    "outputs": [
+      {
+        "internalType": "contract IRollupAdmin",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "rollupUserLogic",
+    "outputs": [
+      {
+        "internalType": "contract IRollupUser",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract BridgeCreator",
+        "name": "_bridgeCreator",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IOneStepProofEntry",
+        "name": "_osp",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IChallengeManager",
+        "name": "_challengeManagerLogic",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IRollupAdmin",
+        "name": "_rollupAdminLogic",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IRollupUser",
+        "name": "_rollupUserLogic",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IUpgradeExecutor",
+        "name": "_upgradeExecutorLogic",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_validatorUtils",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_validatorWalletCreator",
+        "type": "address"
+      },
+      {
+        "internalType": "contract DeployHelper",
+        "name": "_l2FactoriesDeployer",
+        "type": "address"
+      }
+    ],
+    "name": "setTemplates",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "upgradeExecutorLogic",
+    "outputs": [
+      {
+        "internalType": "contract IUpgradeExecutor",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "validatorUtils",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "validatorWalletCreator",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
 ] as const;
 
 /**
@@ -209,19 +486,20 @@ export const rollupCreatorABI = [
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x06E341073b2749e0Bb9912461351f716DeCDa9b0)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xf1adF8A2539f342103656599a4F185e2a6B699e5)
  */
 export const rollupCreatorAddress = {
   1: '0x90D68B056c411015eaE3EC0b98AD94E2C91419F1',
   1337: '0x596eAbE0291D4cdAfAC7ef53D16C92Bf6922b5e0',
   8453: '0x850F050C65B34966895AdA26a4D06923901916DB',
-  17000: '0xB512078282F462Ba104231ad856464Ceb0a7747e',
+  17000: '0xf1adF8A2539f342103656599a4F185e2a6B699e5',
   42161: '0x9CAd81628aB7D8e239F1A5B497313341578c5F71',
   42170: '0x9CAd81628aB7D8e239F1A5B497313341578c5F71',
   84532: '0x1E0921818df948c338380e722C8aE91Bb285763C',
   412346: '0x3BaF9f08bAD68869eEdEa90F2Cc546Bd80F1A651',
-  421614: '0x06E341073b2749e0Bb9912461351f716DeCDa9b0',
+  421614: '0xd66F3594209f3da7b59061b563318430786cF2ce',
   11155111: '0xfBD0B034e6305788007f6e0123cc5EaE701a5751',
 } as const;
 
@@ -233,9 +511,10 @@ export const rollupCreatorAddress = {
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x06E341073b2749e0Bb9912461351f716DeCDa9b0)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
- */
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xf1adF8A2539f342103656599a4F185e2a6B699e5)
+*/
 export const rollupCreatorConfig = {
   address: rollupCreatorAddress,
   abi: rollupCreatorABI,
