@@ -142,12 +142,12 @@ export async function getBatchPosters<TChain extends Chain | undefined>(
 
     switch (txSelectedFunction) {
       case createRollupFunctionSelector: {
-        const [{ batchPoster }] = getBatchPostersFromFunctionData({
+        const [{ batchPosters }] = getBatchPostersFromFunctionData({
           abi: [createRollupABI],
           data: tx.input,
         });
 
-        return new Set([...acc, batchPoster]);
+        return new Set([...acc, ...batchPosters]);
       }
       case setIsBatchPosterFunctionSelector: {
         return updateAccumulator(acc, tx.input);

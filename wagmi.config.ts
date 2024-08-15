@@ -130,9 +130,9 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x850F050C65B34966895AdA26a4D06923901916DB',
       // testnet L1
       [sepolia.id]: '0xfbd0b034e6305788007f6e0123cc5eae701a5751',
-      [holesky.id]: '0xB512078282F462Ba104231ad856464Ceb0a7747e',
+      [holesky.id]: '0xf1adF8A2539f342103656599a4F185e2a6B699e5',
       // testnet L2
-      [arbitrumSepolia.id]: '0x06E341073b2749e0Bb9912461351f716DeCDa9b0',
+      [arbitrumSepolia.id]: '0xd66F3594209f3da7b59061b563318430786cF2ce',
       [baseSepolia.id]: '0x1E0921818df948c338380e722C8aE91Bb285763C',
       // local nitro-testnode (on "release" branch with --tokenbridge --l3node --l3-token-bridge flags)
       [nitroTestnodeL1.id]: '0x596eabe0291d4cdafac7ef53d16c92bf6922b5e0',
@@ -151,9 +151,9 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x4C240987d6fE4fa8C7a0004986e3db563150CA55',
       // testnet L1
       [sepolia.id]: '0x7edb2dfBeEf9417e0454A80c51EE0C034e45a570',
-      [holesky.id]: '0xac890ED9bC2494C053cE701F138958df95966d94',
+      [holesky.id]: '0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F',
       // testnet L2
-      [arbitrumSepolia.id]: '0x56C486D3786fA26cc61473C499A36Eb9CC1FbD8E',
+      [arbitrumSepolia.id]: '0x22b47E13c40cA29Cf254be9FE8c2f305283eF1C3',
       [baseSepolia.id]: '0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3',
       // local nitro-testnode (on "release" branch with --tokenbridge --l3node --l3-token-bridge flags)
       [nitroTestnodeL1.id]: '0x54B4D4e578E10178a6cA602bdb6df0F213296Af4',
