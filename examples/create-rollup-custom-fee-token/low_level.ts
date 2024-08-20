@@ -8,8 +8,8 @@ import {
   createRollupPrepareCustomFeeTokenApprovalTransactionRequest,
   createRollupPrepareTransactionRequest,
   createRollupPrepareTransactionReceipt,
-} from '@arbitrum/orbit-sdk';
-import { sanitizePrivateKey, generateChainId } from '@arbitrum/orbit-sdk/utils';
+} from '@eigenda/orbit-sdk';
+import { sanitizePrivateKey, generateChainId } from '@eigenda/orbit-sdk/utils';
 import { config } from 'dotenv';
 config();
 

@@ -5,8 +5,8 @@ import {
   createRollupFetchTransactionHash,
   createRollupPrepareTransactionReceipt,
   rollupAdminLogicPublicActions,
-} from '@arbitrum/orbit-sdk';
-import { sanitizePrivateKey } from '@arbitrum/orbit-sdk/utils';
+} from '@eigenda/orbit-sdk';
+import { sanitizePrivateKey } from '@eigenda/orbit-sdk/utils';
 import { config } from 'dotenv';
 config();
 

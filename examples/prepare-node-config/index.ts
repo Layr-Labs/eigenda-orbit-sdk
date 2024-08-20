@@ -7,8 +7,8 @@ import {
   createRollupPrepareTransaction,
   createRollupPrepareTransactionReceipt,
   prepareNodeConfig,
-} from '@arbitrum/orbit-sdk';
-import { getParentChainLayer } from '@arbitrum/orbit-sdk/utils';
+} from '@eigenda/orbit-sdk';
+import { getParentChainLayer } from '@eigenda/orbit-sdk/utils';
 import { config } from 'dotenv';
 config();
 

@@ -1,8 +1,8 @@
 import { Chain, createPublicClient, http } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import { arbitrumSepolia } from 'viem/chains';
-import { setValidKeysetPrepareTransactionRequest } from '@arbitrum/orbit-sdk';
-import { sanitizePrivateKey } from '@arbitrum/orbit-sdk/utils';
+import { setValidKeysetPrepareTransactionRequest } from '@eigenda/orbit-sdk';
+import { sanitizePrivateKey } from '@eigenda/orbit-sdk/utils';
 
 function getBlockExplorerUrl(chain: Chain) {
   return chain.blockExplorers?.default.url;
