@@ -130,7 +130,7 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x850F050C65B34966895AdA26a4D06923901916DB',
       // testnet L1
       [sepolia.id]: '0xfbd0b034e6305788007f6e0123cc5eae701a5751',
-      [holesky.id]: '0xf1adF8A2539f342103656599a4F185e2a6B699e5',
+      [holesky.id]: '0x344ed2515a033E063AA73398e7CB712c34c1ffd3',
       // testnet L2
       [arbitrumSepolia.id]: '0xd66F3594209f3da7b59061b563318430786cF2ce',
       [baseSepolia.id]: '0x1E0921818df948c338380e722C8aE91Bb285763C',
@@ -151,7 +151,7 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x4C240987d6fE4fa8C7a0004986e3db563150CA55',
       // testnet L1
       [sepolia.id]: '0x7edb2dfBeEf9417e0454A80c51EE0C034e45a570',
-      [holesky.id]: '0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F',
+      [holesky.id]: '0x548aaE9254c9f16E3BF7b2843E8f7d1ef598f3bE',
       // testnet L2
       [arbitrumSepolia.id]: '0x22b47E13c40cA29Cf254be9FE8c2f305283eF1C3',
       [baseSepolia.id]: '0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3',
