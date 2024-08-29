@@ -130,7 +130,7 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x850F050C65B34966895AdA26a4D06923901916DB',
       // testnet L1
       [sepolia.id]: '0xfbd0b034e6305788007f6e0123cc5eae701a5751',
-      [holesky.id]: '0xE885D1E3ED4188026116A655127eD58452cc6b2b',
+      [holesky.id]: '0x006E739e032ED7bee92904C4eE735bCBC4C1c3AD',
       // testnet L2
       [arbitrumSepolia.id]: '0xd66F3594209f3da7b59061b563318430786cF2ce',
       [baseSepolia.id]: '0x1E0921818df948c338380e722C8aE91Bb285763C',

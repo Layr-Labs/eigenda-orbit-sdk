@@ -1,8 +1,7 @@
 import { parseEther, zeroAddress } from 'viem';
 
 export const wasmModuleRoot: `0x${string}` =
-  // https://github.com/OffchainLabs/nitro/releases/tag/consensus-v20
-  '0xb0de9cb89e4d944ae6023a3b62276e54804c242fd8c4c2d8e6cc4450f5fa8b1b';
+  '0x5ce37f09a3b504c06f8fddc278b00135871676ed9b6cb1fbb55cb57bfcb03e16';
 
 export const defaults = {
   extraChallengeTimeBlocks: BigInt(0),
