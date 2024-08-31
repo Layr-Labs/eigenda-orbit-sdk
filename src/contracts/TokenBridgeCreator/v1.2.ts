@@ -12,7 +12,7 @@
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x22b47E13c40cA29Cf254be9FE8c2f305283eF1C3)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x7edb2dfBeEf9417e0454A80c51EE0C034e45a570)
- * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F)
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xF1ad784E109695F6A2D4E053647507A54c4d47a3)
  */
 export const tokenBridgeCreatorABI = [
   { stateMutability: 'nonpayable', type: 'constructor', inputs: [] },
@@ -413,13 +413,13 @@ export const tokenBridgeCreatorABI = [
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x22b47E13c40cA29Cf254be9FE8c2f305283eF1C3)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x7edb2dfBeEf9417e0454A80c51EE0C034e45a570)
- * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F)
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xF1ad784E109695F6A2D4E053647507A54c4d47a3)
  */
 export const tokenBridgeCreatorAddress = {
   1: '0x60D9A46F24D5a35b95A78Dd3E793e55D94EE0660',
   1337: '0x54B4D4e578E10178a6cA602bdb6df0F213296Af4',
   8453: '0x4C240987d6fE4fa8C7a0004986e3db563150CA55',
-  17000: '0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F',
+  17000: '0xF1ad784E109695F6A2D4E053647507A54c4d47a3',
   42161: '0x2f5624dc8800dfA0A82AC03509Ef8bb8E7Ac000e',
   42170: '0x8B9D9490a68B1F16ac8A21DdAE5Fd7aB9d708c14',
   84532: '0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3',
@@ -438,7 +438,7 @@ export const tokenBridgeCreatorAddress = {
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0xFC71d21a4FE10Cc0d34745ba9c713836f82f8DE3)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x22b47E13c40cA29Cf254be9FE8c2f305283eF1C3)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0x7edb2dfBeEf9417e0454A80c51EE0C034e45a570)
- * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x0315bdc33Dac25aF65a40BBFa2686ba1e6043f9F)
+ * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0xF1ad784E109695F6A2D4E053647507A54c4d47a3)
  */
 export const tokenBridgeCreatorConfig = {
   address: tokenBridgeCreatorAddress,
