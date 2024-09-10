@@ -1,7 +1,7 @@
 import { parseEther, zeroAddress } from 'viem';
 
 export const wasmModuleRoot: `0x${string}` =
-  '0x58393c4cde154da53d3ed5962bdf68bdba6b3ba4bbf394a751ce46ed05075d2b';
+  '0x59e9a1ea4ae5fa88d6cee2f257bd7b717b0b5b51c2b96c4289ce371843c3e914';
 
 export const defaults = {
   extraChallengeTimeBlocks: BigInt(0),
