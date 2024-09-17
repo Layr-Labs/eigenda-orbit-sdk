@@ -10,7 +10,7 @@
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xbcEb6Ac6Aa7a2073813Ad648770b6A5957303BAc)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
  * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x280ca9Cd691841Fed2219F19F8eC2A13F37705Ec)
  */
@@ -486,7 +486,7 @@ export const rollupCreatorABI = [
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xbcEb6Ac6Aa7a2073813Ad648770b6A5957303BAc)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
  * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x280ca9Cd691841Fed2219F19F8eC2A13F37705Ec)
  */
@@ -499,7 +499,7 @@ export const rollupCreatorAddress = {
   42170: '0x9CAd81628aB7D8e239F1A5B497313341578c5F71',
   84532: '0x1E0921818df948c338380e722C8aE91Bb285763C',
   412346: '0x3BaF9f08bAD68869eEdEa90F2Cc546Bd80F1A651',
-  421614: '0xd66F3594209f3da7b59061b563318430786cF2ce',
+  421614: '0xbcEb6Ac6Aa7a2073813Ad648770b6A5957303BAc',
   11155111: '0xfBD0B034e6305788007f6e0123cc5EaE701a5751',
 } as const;
 
@@ -511,7 +511,7 @@ export const rollupCreatorAddress = {
  * - [__View Contract on Arbitrum One Arbiscan__](https://arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Arbitrum Nova Arbiscan__](https://nova.arbiscan.io/address/0x9CAd81628aB7D8e239F1A5B497313341578c5F71)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x1E0921818df948c338380e722C8aE91Bb285763C)
- * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xd66F3594209f3da7b59061b563318430786cF2ce)
+ * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0xbcEb6Ac6Aa7a2073813Ad648770b6A5957303BAc)
  * - [__View Contract on Sepolia Etherscan__](https://sepolia.etherscan.io/address/0xfbd0b034e6305788007f6e0123cc5eae701a5751)
  * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x280ca9Cd691841Fed2219F19F8eC2A13F37705Ec)
 */
