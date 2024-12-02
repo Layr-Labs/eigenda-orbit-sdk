@@ -1,11 +1,7 @@
 {
   "name": "@eigenda/orbit-sdk",
   "description": "TypeScript SDK for building EigenDA integrated Arbitrum Orbit chains",
-<<<<<<< Updated upstream
-  "version": "0.17.18",
-=======
   "version": "0.17.20",
->>>>>>> Stashed changes
   "main": "./dist/index.js",
   "files": [
     "./dist"
