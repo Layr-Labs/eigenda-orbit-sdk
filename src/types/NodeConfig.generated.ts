@@ -531,9 +531,9 @@ export type NodeConfig = {
     };
     'eigen-da'?: {
       /** enable EigenDA */
-      'enable'?: boolean;
+      enable?: boolean;
       /** RPC URL for EigenDA */
-      'rpc'?: string;
+      rpc?: string;
     };
     'data-availability'?: {
       /** enable Anytrust Data Availability mode */

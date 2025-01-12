@@ -98,8 +98,8 @@ export function prepareNodeConfig({
     },
     'node': {
       'eigen-da': {
-        'enable': true,
-        'rpc': eigendaRpcUrl,
+        enable: true,
+        rpc: eigendaRpcUrl,
       },
       'sequencer': true,
       'delayed-sequencer': {

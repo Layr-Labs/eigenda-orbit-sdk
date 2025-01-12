@@ -20,7 +20,9 @@ function getNitroNodeImageTag(): string {
 
 const nitroNodeTag = getNitroNodeImageTag();
 const nitroNodeImage = `ghcr.io/layr-labs/nitro-eigenda:${nitroNodeTag}`;
-const nitroNodeHelpOutputFile = `${nitroNodeImage.replace('ghcr.io/', '').replace('/', '-')}-help.txt`;
+const nitroNodeHelpOutputFile = `${nitroNodeImage
+  .replace('ghcr.io/', '')
+  .replace('/', '-')}-help.txt`;
 
 console.log(`Using image "${nitroNodeImage}".`);
 
