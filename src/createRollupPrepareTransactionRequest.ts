@@ -46,7 +46,7 @@ export async function createRollupPrepareTransactionRequest<TChain extends Chain
 }: CreateRollupPrepareTransactionRequestParams<TChain>) {
   const chainId = validateParentChain(publicClient);
 
-  if (params.batchPosters.some(address => address === zeroAddress)) {
+  if (params.batchPosters.some((address) => address === zeroAddress)) {
     throw new Error(`"params.batchPosters" can't include an zero address.`);
   }
 
@@ -73,7 +73,7 @@ export async function createRollupPrepareTransactionRequest<TChain extends Chain
   }
 
   const maxDataSize = createRollupGetMaxDataSize(chainId);
-  // Set the default batchPosterManager to the deployer account 
+  // Set the default batchPosterManager to the deployer account
   const batchPosterManager = !params.batchPosterManager ? account : params.batchPosterManager;
   const paramsWithDefaults = { ...defaults, ...params, maxDataSize, batchPosterManager };
 

@@ -39,10 +39,10 @@ it('creates chain config with custom params', () => {
       epoch: 1,
     },
     arbitrum: {
-      EnableArbOS: true,
+      EnableArbOS: false,
       AllowDebugPrecompiles: true,
       DataAvailabilityCommittee: true,
-      InitialArbOSVersion: 30,
+      InitialArbOSVersion: 32,
       EigenDA: true,
       InitialChainOwner: vitalik,
       GenesisBlockNum: 1,
