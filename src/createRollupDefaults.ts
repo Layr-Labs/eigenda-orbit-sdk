@@ -5,5 +5,5 @@ export const defaults = {
   deployFactoriesToL2: true,
   maxFeePerGasForRetryables: parseGwei(String('0.1')),
   // Zero address leads to a dummy manager being created in the constructor
-  eigenDARollupManager: zeroAddress,
+  eigenDACertVerifier: zeroAddress,
 };
