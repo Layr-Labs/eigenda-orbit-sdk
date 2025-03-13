@@ -99,6 +99,22 @@ export const sequencerInboxABI = [
     type: 'error',
   },
   {
+    inputs: [
+      {
+        internalType: 'uint256',
+        name: 'currentBlock',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'l1ReferenceBlock',
+        type: 'uint256',
+      },
+    ],
+    name: 'ExpiredEigenDACert',
+    type: 'error',
+  },
+  {
     inputs: [],
     name: 'ForceIncludeBlockTooSoon',
     type: 'error',
@@ -179,12 +195,12 @@ export const sequencerInboxABI = [
   },
   {
     inputs: [],
-    name: 'NotForked',
+    name: 'NotCodelessOrigin',
     type: 'error',
   },
   {
     inputs: [],
-    name: 'NotOrigin',
+    name: 'NotForked',
     type: 'error',
   },
   {
@@ -560,128 +576,135 @@ export const sequencerInboxABI = [
       {
         components: [
           {
-            internalType: 'uint32',
-            name: 'batchId',
-            type: 'uint32',
-          },
-          {
-            internalType: 'uint32',
-            name: 'blobIndex',
-            type: 'uint32',
+            components: [
+              {
+                internalType: 'uint32',
+                name: 'batchId',
+                type: 'uint32',
+              },
+              {
+                internalType: 'uint32',
+                name: 'blobIndex',
+                type: 'uint32',
+              },
+              {
+                components: [
+                  {
+                    components: [
+                      {
+                        internalType: 'bytes32',
+                        name: 'blobHeadersRoot',
+                        type: 'bytes32',
+                      },
+                      {
+                        internalType: 'bytes',
+                        name: 'quorumNumbers',
+                        type: 'bytes',
+                      },
+                      {
+                        internalType: 'bytes',
+                        name: 'signedStakeForQuorums',
+                        type: 'bytes',
+                      },
+                      {
+                        internalType: 'uint32',
+                        name: 'referenceBlockNumber',
+                        type: 'uint32',
+                      },
+                    ],
+                    internalType: 'struct BatchHeader',
+                    name: 'batchHeader',
+                    type: 'tuple',
+                  },
+                  {
+                    internalType: 'bytes32',
+                    name: 'signatoryRecordHash',
+                    type: 'bytes32',
+                  },
+                  {
+                    internalType: 'uint32',
+                    name: 'confirmationBlockNumber',
+                    type: 'uint32',
+                  },
+                ],
+                internalType: 'struct BatchMetadata',
+                name: 'batchMetadata',
+                type: 'tuple',
+              },
+              {
+                internalType: 'bytes',
+                name: 'inclusionProof',
+                type: 'bytes',
+              },
+              {
+                internalType: 'bytes',
+                name: 'quorumIndices',
+                type: 'bytes',
+              },
+            ],
+            internalType: 'struct BlobVerificationProof',
+            name: 'blobVerificationProof',
+            type: 'tuple',
           },
           {
             components: [
               {
                 components: [
                   {
-                    internalType: 'bytes32',
-                    name: 'blobHeadersRoot',
-                    type: 'bytes32',
+                    internalType: 'uint256',
+                    name: 'X',
+                    type: 'uint256',
                   },
                   {
-                    internalType: 'bytes',
-                    name: 'quorumNumbers',
-                    type: 'bytes',
-                  },
-                  {
-                    internalType: 'bytes',
-                    name: 'signedStakeForQuorums',
-                    type: 'bytes',
-                  },
-                  {
-                    internalType: 'uint32',
-                    name: 'referenceBlockNumber',
-                    type: 'uint32',
+                    internalType: 'uint256',
+                    name: 'Y',
+                    type: 'uint256',
                   },
                 ],
-                internalType: 'struct IEigenDAServiceManager.BatchHeader',
-                name: 'batchHeader',
+                internalType: 'struct BN254.G1Point',
+                name: 'commitment',
                 type: 'tuple',
               },
               {
-                internalType: 'bytes32',
-                name: 'signatoryRecordHash',
-                type: 'bytes32',
-              },
-              {
                 internalType: 'uint32',
-                name: 'confirmationBlockNumber',
+                name: 'dataLength',
                 type: 'uint32',
               },
+              {
+                components: [
+                  {
+                    internalType: 'uint8',
+                    name: 'quorumNumber',
+                    type: 'uint8',
+                  },
+                  {
+                    internalType: 'uint8',
+                    name: 'adversaryThresholdPercentage',
+                    type: 'uint8',
+                  },
+                  {
+                    internalType: 'uint8',
+                    name: 'confirmationThresholdPercentage',
+                    type: 'uint8',
+                  },
+                  {
+                    internalType: 'uint32',
+                    name: 'chunkLength',
+                    type: 'uint32',
+                  },
+                ],
+                internalType: 'struct QuorumBlobParam[]',
+                name: 'quorumBlobParams',
+                type: 'tuple[]',
+              },
             ],
-            internalType: 'struct IEigenDAServiceManager.BatchMetadata',
-            name: 'batchMetadata',
+            internalType: 'struct BlobHeader',
+            name: 'blobHeader',
             type: 'tuple',
-          },
-          {
-            internalType: 'bytes',
-            name: 'inclusionProof',
-            type: 'bytes',
-          },
-          {
-            internalType: 'bytes',
-            name: 'quorumIndices',
-            type: 'bytes',
-          },
+          }
         ],
-        internalType: 'struct EigenDARollupUtils.BlobVerificationProof',
-        name: 'blobVerificationProof',
-        type: 'tuple',
-      },
-      {
-        components: [
-          {
-            components: [
-              {
-                internalType: 'uint256',
-                name: 'X',
-                type: 'uint256',
-              },
-              {
-                internalType: 'uint256',
-                name: 'Y',
-                type: 'uint256',
-              },
-            ],
-            internalType: 'struct BN254.G1Point',
-            name: 'commitment',
-            type: 'tuple',
-          },
-          {
-            internalType: 'uint32',
-            name: 'dataLength',
-            type: 'uint32',
-          },
-          {
-            components: [
-              {
-                internalType: 'uint8',
-                name: 'quorumNumber',
-                type: 'uint8',
-              },
-              {
-                internalType: 'uint8',
-                name: 'adversaryThresholdPercentage',
-                type: 'uint8',
-              },
-              {
-                internalType: 'uint8',
-                name: 'confirmationThresholdPercentage',
-                type: 'uint8',
-              },
-              {
-                internalType: 'uint32',
-                name: 'chunkLength',
-                type: 'uint32',
-              },
-            ],
-            internalType: 'struct IEigenDAServiceManager.QuorumBlobParam[]',
-            name: 'quorumBlobParams',
-            type: 'tuple[]',
-          },
-        ],
-        internalType: 'struct IEigenDAServiceManager.BlobHeader',
-        name: 'blobHeader',
+        internalType: 'struct ISequencerInbox.EigenDACert',
+        name: 'cert',
         type: 'tuple',
       },
       {
@@ -841,10 +864,10 @@ export const sequencerInboxABI = [
   },
   {
     inputs: [],
-    name: 'eigenDARollupManager',
+    name: 'eigenDACertVerifier',
     outputs: [
       {
-        internalType: 'address',
+        internalType: 'contract IEigenDACertVerifier',
         name: '',
         type: 'address',
       },
@@ -1149,11 +1172,11 @@ export const sequencerInboxABI = [
     inputs: [
       {
         internalType: 'address',
-        name: 'newRollupManager',
+        name: 'newCertVerifier',
         type: 'address',
       },
     ],
-    name: 'setEigenDARollupManager',
+    name: 'setEigenDACertVerifier',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -1225,13 +1248,6 @@ export const sequencerInboxABI = [
       },
     ],
     name: 'setMaxTimeVariation',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'setRollupAddress',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
