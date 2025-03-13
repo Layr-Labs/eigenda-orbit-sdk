@@ -525,7 +525,7 @@ export const rollupCreatorAddress = {
 
   1: '0xAf5F13b5aB7a5da24f8b2808a032296Ef3476AF6', // eth mainnet
   8453: '0xaFa98453F1f3B1Ea7629e67621a29B7Be4AC225A', // base mainnet
-  84532: '0xfc2a0CD44A6CB0b72d5a7F8Db2C044F62db50781', // base sepolia
+  84532: '0xe4493af3d320f372e5E123e86d0eC067FaBDf8D9', // base sepolia
   17000: '0x4449adCcad953ce8feB2FD50707B17f876bBDEf4', // holesky
   42161: '0x8c83b9c670E90A4fAbf19E6fCb267caf12644a87', // arbOne
   421614: '0x4264420318Ba09C29dbbe402b3f16Ee13903a031', // arb sepolia
