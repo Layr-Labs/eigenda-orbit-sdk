@@ -3,11 +3,12 @@
 // RollupCreator
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
- * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/zeroAddress)
- * - [__View Contract on Base Basescan__](https://basescan.org/address/0xaFa98453F1f3B1Ea7629e67621a29B7Be4AC225A)
+ * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xdD6258539c41687B9afd38983c0456493423C73d)
+ * - [__View Contract on Base Basescan__](https://basescan.org/address/0xcC272c9249d1638B7985eFb84c0E9Cdc001b73F7)
  * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x8d6e555f2Fa2d3848036945742C3dDE8Bb4B39aF)
  * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x22AaeA3A47d73e9585D0378D1d9e1CeF7Cd8c6a1)
  * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x0F7f71c48c6278422736a4a9441cd1d59ba0C2dB)
+ * - [__View Contract on Arbitrum One Scan__](https://www.arbiscan.io/address/0x4231Dd9e6717aB9a9ABC5618d8a4Fcf1a432F698)
  */
 
 export const rollupCreatorABI = [
@@ -508,11 +509,12 @@ export const rollupCreatorABI = [
 ] as const;
   
   /**
-   * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/zeroAddress)
-   * - [__View Contract on Base Basescan__](https://basescan.org/address/0xaFa98453F1f3B1Ea7629e67621a29B7Be4AC225A)
+   * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xdD6258539c41687B9afd38983c0456493423C73d)
+   * - [__View Contract on Base Basescan__](https://basescan.org/address/0xcC272c9249d1638B7985eFb84c0E9Cdc001b73F7)
    * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x8d6e555f2Fa2d3848036945742C3dDE8Bb4B39aF)
    * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x22AaeA3A47d73e9585D0378D1d9e1CeF7Cd8c6a1)
    * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x0F7f71c48c6278422736a4a9441cd1d59ba0C2dB)
+   * - [__View Contract on Arbitrum One Scan__](https://www.arbiscan.io/address/0x4231Dd9e6717aB9a9ABC5618d8a4Fcf1a432F698)
    */
   
   const zeroAddress = '0x0000000000000000000000000000000000000000';
@@ -524,21 +526,21 @@ export const rollupCreatorABI = [
     412346: zeroAddress,
     11155111: zeroAddress,
     
-    // TODO: update mapping with mainnet contracts once deployed
-    1: zeroAddress, // eth mainnet
-    8453: zeroAddress, // base mainnet
+    1: '0xdD6258539c41687B9afd38983c0456493423C73d', // eth mainnet
+    8453: '0xcC272c9249d1638B7985eFb84c0E9Cdc001b73F7', // base mainnet
     84532: '0x8d6e555f2Fa2d3848036945742C3dDE8Bb4B39aF', // base sepolia
     17000: '0x22AaeA3A47d73e9585D0378D1d9e1CeF7Cd8c6a1', // holesky
-    42161: zeroAddress, // arbOne
+    42161: '0x4231Dd9e6717aB9a9ABC5618d8a4Fcf1a432F698', // arbOne
     421614: '0x0F7f71c48c6278422736a4a9441cd1d59ba0C2dB', // arb sepolia
   } as const;
   
   /**
-   * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/zeroAddress)
-   * - [__View Contract on Base Basescan__](https://basescan.org/address/0xaFa98453F1f3B1Ea7629e67621a29B7Be4AC225A)
+   * - [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0xdD6258539c41687B9afd38983c0456493423C73d)
+   * - [__View Contract on Base Basescan__](https://basescan.org/address/0xcC272c9249d1638B7985eFb84c0E9Cdc001b73F7)
    * - [__View Contract on Base Sepolia Blockscout__](https://base-sepolia.blockscout.com/address/0x8d6e555f2Fa2d3848036945742C3dDE8Bb4B39aF)
    * - [__View Contract on Holesky Etherscan__](https://holesky.etherscan.io/address/0x22AaeA3A47d73e9585D0378D1d9e1CeF7Cd8c6a1)
    * - [__View Contract on Arbitrum Sepolia Blockscout__](https://sepolia-explorer.arbitrum.io/address/0x0F7f71c48c6278422736a4a9441cd1d59ba0C2dB)
+   * - [__View Contract on Arbitrum One Scan__](https://www.arbiscan.io/address/0x4231Dd9e6717aB9a9ABC5618d8a4Fcf1a432F698)
    */
   export const rollupCreatorConfig = {
     address: rollupCreatorAddress,
