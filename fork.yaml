@@ -55,6 +55,16 @@ def:
           - src/createRollup.integration.test.ts
           - src/testHelpers.ts
 
+      - title: "Custom Rollup Creators"
+        description: |
+          Deployed custom rollup creators using eigenda nitro-contracts.
+      
+        globs:
+          - src/contracts/RollupCreator/eigenda-v2.1.0.ts
+          - src/contracts/RollupCreator/index.ts
+          - src/contracts/TokenBridgeCreator/v1.2.ts
+          - wagmi.config.ts
+
 ignore:
   - examples/**
   - package.json

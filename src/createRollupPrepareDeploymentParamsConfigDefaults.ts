@@ -1,8 +1,8 @@
 import { parseEther, zeroAddress } from 'viem';
 
 export const wasmModuleRoot: `0x${string}` =
-  // https://github.com/OffchainLabs/nitro/releases/tag/consensus-v20
-  '0x8b104a2e80ac6165dc58b9048de12f301d70b02a0ab51396c22b4b4b802a16a4';
+  // EigenDA consensus module root
+  '0x5ce37f09a3b504c06f8fddc278b00135871676ed9b6cb1fbb55cb57bfcb03e16';
 
 export const defaults = {
   extraChallengeTimeBlocks: BigInt(0),

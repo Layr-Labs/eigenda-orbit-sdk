@@ -1,2 +1,2 @@
-// export the latest version
-export * from './v1.1';
+// Export the latest version
+export * from './eigenda-v2.1.0';

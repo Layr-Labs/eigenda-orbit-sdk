@@ -130,7 +130,11 @@ const contracts: ContractConfig[] = [
       [base.id]: '0x850F050C65B34966895AdA26a4D06923901916DB',
       // testnet L1
       [sepolia.id]: '0xfbd0b034e6305788007f6e0123cc5eae701a5751',
+<<<<<<< HEAD
       [holesky.id]: '0xf1adF8A2539f342103656599a4F185e2a6B699e5',
+=======
+      [holesky.id]: '0xE885D1E3ED4188026116A655127eD58452cc6b2b',
+>>>>>>> 0ca88f4 (chore: update dep contracts)
       // testnet L2
       [arbitrumSepolia.id]: '0xd66F3594209f3da7b59061b563318430786cF2ce',
       [baseSepolia.id]: '0x1E0921818df948c338380e722C8aE91Bb285763C',
