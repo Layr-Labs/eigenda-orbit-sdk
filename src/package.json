@@ -1,7 +1,7 @@
 {
-  "name": "@arbitrum/orbit-sdk",
-  "description": "TypeScript SDK for building Arbitrum Orbit chains",
-  "version": "0.17.2",
+  "name": "@eigenda/orbit-sdk",
+  "description": "TypeScript SDK for building EigenDA integrated Arbitrum Orbit chains",
+  "version": "0.18.12",
   "main": "./dist/index.js",
   "files": [
     "./dist"
@@ -22,6 +22,10 @@
     "./constants": {
       "types": "./dist/constants.d.ts",
       "default": "./dist/constants.js"
+    },
+    "./contracts/*": {
+      "types": "./dist/contracts/*",
+      "default": "./dist/contracts/*"
     }
   },
   "typesVersions": {
@@ -34,11 +38,14 @@
       ],
       "constants": [
         "./dist/constants.d.ts"
+      ],
+      "contracts/*": [
+        "./dist/contracts/*"
       ]
     }
   },
-  "repository": "git+https://github.com/OffchainLabs/arbitrum-orbit-sdk.git",
-  "author": "Offchain Labs, Inc.",
+  "repository": "git+https://github.com/Layr-Labs/eigenda-orbit-sdk.git",
+  "author": "EigenDA",
   "license": "Apache-2.0",
   "peerDependencies": {
     "viem": "^1.20.0"

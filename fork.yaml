@@ -16,7 +16,15 @@ def:
       The original orbit-sdk codebase can be found at [`github.com/OffchainLabs/orbit-sdk`](https://github.com/OffchainLabs/orbit-sdk).
       And the fork at [`github.com/Layr-Labs/eigenda-orbit-sdk`](https://github.com/Layr-Labs/eigenda-orbit-sdk).
 
-    sub: []
+    sub:
+      - title: "npm package"
+        description: |
+          Support new NPM package (i.e, `@eigenda/orbit-sdk`) for publishing and downloading
+          SDK artifacts. Updated all existing usage examples with new package references.
+
+        globs:
+          - README.md
+          - src/package.json
 
 ignore:
   - examples/**
