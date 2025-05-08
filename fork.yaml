@@ -57,6 +57,19 @@ def:
           - src/prepareChainConfig.ts
           - src/utils/getArbOSVersion.unit.test.ts
 
+      - title: "Custom Rollup Creators"
+        description: |
+          Deployed custom rollup creators using eigenda nitro-contracts.
+      
+        globs:
+          - src/contracts/RollupCreator/v2.1.ts
+          - src/contracts/RollupCreator/eigenda-v2.1.ts
+          - src/contracts/RollupCreator/eigenda-v2.1.3.ts
+          - src/contracts/RollupCreator/index.ts
+          - src/contracts/RollupCreator/v1.1.ts
+          - src/contracts/TokenBridgeCreator/v1.2.ts
+          - wagmi.config.ts
+
 ignore:
   - examples/**
   - package.json
