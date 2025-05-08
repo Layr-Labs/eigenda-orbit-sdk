@@ -1,0 +1,40 @@
+title: "layr-labs/eigenda-orbit-sdk"  # Define the HTML page title
+logo: "logo.png"
+footer: |  # define the footer with markdown
+  [orbit-sdk](https://github.com/Layr-Labs/orbit-sdk) fork overview &middot created with [Forkdiff](https://github.com/protolambda/forkdiff)
+base:
+  name: OffchainLabs/orbit-sdk
+  url: https://github.com/OffchainLabs/orbit-sdk
+  hash: 8522dd838fe624422d20d9d2f085d8a29a1f5c4d
+fork:
+  name: Layr-Labs/eigenda-orbit-sdk
+  url: https://github.com/Layr-Labs/eigenda-orbit-sdk
+  ref: refs/heads/main
+def:
+    title: "Orbit SDK Fork Overview"
+    description: | # description in markdown
+      The original orbit-sdk codebase can be found at [`github.com/OffchainLabs/orbit-sdk`](https://github.com/OffchainLabs/orbit-sdk).
+      And the fork at [`github.com/Layr-Labs/eigenda-orbit-sdk`](https://github.com/Layr-Labs/eigenda-orbit-sdk).
+
+    sub:
+      - title: "EigenDA default values"
+        description: |
+          Updated node config default values to use EigenDA. Also updated default deploy params
+          to reflect blob verifier contract.
+          
+        globs:
+          - src/prepareNodeConfig.ts
+          - src/types/NodeConfig.generated.ts
+          - src/types/ChainConfig.ts
+          - src/scripts/generateNodeConfigType.ts
+          - src/prepareChainConfig.unit.test.ts
+          - src/createRollupPrepareDeploymentParamsConfigDefaults.ts
+          - src/createRollupDefaults.ts
+          - src/contracts/SequencerInbox.ts
+          - src/prepareChainConfig.ts
+
+ignore:
+  - examples/**
+  - package.json
+  - .github/workflows/pages.yml
+  - fork.yaml
