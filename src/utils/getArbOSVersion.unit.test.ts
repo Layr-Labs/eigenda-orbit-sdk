@@ -9,7 +9,7 @@ it('Returns the ArbOS version for arbitrum chain', async () => {
     chain: arbitrum,
     transport: http(),
   });
-  expect(await getArbOSVersion(arbProvider)).toBe(20);
+  expect(await getArbOSVersion(arbProvider)).toBe(32);
 });
 
 it('Throws if the provider is not an Arbitrum provider', async () => {

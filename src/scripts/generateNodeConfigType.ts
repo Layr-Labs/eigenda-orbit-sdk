@@ -5,7 +5,7 @@ import { Project, WriterFunction, Writers } from 'ts-morph';
 const { objectType } = Writers;
 
 function getNitroNodeImageTag(): string {
-  const defaultNitroNodeTag = 'v2.3.3-6a1c1a7';
+  const defaultNitroNodeTag = 'eigenda-v3.2.1-linux-amd64';
   const argv = process.argv.slice(2);
 
   if (argv.length < 2 || argv[0] !== '--nitro-node-tag') {
@@ -19,8 +19,10 @@ function getNitroNodeImageTag(): string {
 }
 
 const nitroNodeTag = getNitroNodeImageTag();
-const nitroNodeImage = `offchainlabs/nitro-node:${nitroNodeTag}`;
-const nitroNodeHelpOutputFile = `${nitroNodeImage.replace('/', '-')}-help.txt`;
+const nitroNodeImage = `ghcr.io/layr-labs/nitro-eigenda:${nitroNodeTag}`;
+const nitroNodeHelpOutputFile = `${nitroNodeImage
+  .replace('ghcr.io/', '')
+  .replace('/', '-')}-help.txt`;
 
 console.log(`Using image "${nitroNodeImage}".`);
 

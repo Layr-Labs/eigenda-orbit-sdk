@@ -40,6 +40,23 @@ def:
           - src/testHelpers.ts
           - src/types/createRollupTypes.ts
 
+      - title: "EigenDA default values"
+        description: |
+          Updated node config default values to use EigenDA. Also updated default deploy params
+          to reflect blob verifier contract.
+          
+        globs:
+          - src/prepareNodeConfig.ts
+          - src/types/NodeConfig.generated.ts
+          - src/types/ChainConfig.ts
+          - src/scripts/generateNodeConfigType.ts
+          - src/prepareChainConfig.unit.test.ts
+          - src/createRollupPrepareDeploymentParamsConfigDefaults.ts
+          - src/createRollupDefaults.ts
+          - src/contracts/SequencerInbox.ts
+          - src/prepareChainConfig.ts
+          - src/utils/getArbOSVersion.unit.test.ts
+
 ignore:
   - examples/**
   - package.json

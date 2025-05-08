@@ -23,7 +23,8 @@ export const defaults = {
     EnableArbOS: true,
     AllowDebugPrecompiles: false,
     DataAvailabilityCommittee: false,
-    InitialArbOSVersion: 20,
+    InitialArbOSVersion: 32, // https://github.com/Layr-Labs/nitro/releases/tag/consensus-eigenda-v32
+    EigenDA: true,
     GenesisBlockNum: 0,
     MaxCodeSize: 24_576,
     MaxInitCodeSize: 49_152,
