@@ -25,6 +25,20 @@ def:
         globs:
           - README.md
           - src/package.json
+      
+      - title: "Multiple Batch Posters"
+        description: |
+          Updated the batch poster representation to be an array of addresses. This was done to align
+          with a recent `SequencerInbox` change which allowed for redundant posters using separate private
+          keys.
+
+        globs:
+          - src/getBatchPosters.ts
+          - src/decorators/sequencerInboxActions.integration.test.ts
+          - src/createRollupPrepareTransactionRequest.ts
+          - src/createRollup.integration.test.ts
+          - src/testHelpers.ts
+          - src/types/createRollupTypes.ts
 
 ignore:
   - examples/**

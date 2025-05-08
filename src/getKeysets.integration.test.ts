@@ -100,7 +100,7 @@ async function createAnytrustRollup() {
 
   return createRollupHelper({
     deployer: l3TokenBridgeDeployer,
-    batchPoster,
+    batchPosters: [batchPoster],
     validators,
     nativeToken: zeroAddress,
     client,
