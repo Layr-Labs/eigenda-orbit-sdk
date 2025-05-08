@@ -33,6 +33,28 @@ def:
           - src/contracts/SequencerInbox.ts
           - src/prepareChainConfig.ts
 
+      - title: "npm package"
+        description: |
+          Support new NPM package (i.e, `@eigenda/orbit-sdk`) for publishing and downloading
+          SDK artifacts. Updated all existing usage examples with new package references.
+
+        globs:
+          - README.md
+          - src/package.json
+
+      - title: "Multiple Batch Posters"
+        description: |
+          Updated the batch poster representation to be an array of addresses. This was done to align
+          with a recent `SequencerInbox` change which allowed for redundant posters using separate private
+          keys.
+
+        globs:
+          - src/getBatchPosters.ts
+          - src/decorators/sequencerInboxActions.integration.test.ts
+          - src/createRollupPrepareTransactionRequest.ts
+          - src/createRollup.integration.test.ts
+          - src/testHelpers.ts
+
 ignore:
   - examples/**
   - package.json
