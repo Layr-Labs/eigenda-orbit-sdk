@@ -524,7 +524,7 @@ export const rollupCreatorABI = [
     1337: zeroAddress,
     42170: zeroAddress,
     412346: zeroAddress,
-    11155111: zeroAddress,
+    11155111: '0x5af6fe79EB79A8177268ab143f31f7e0A9b7Fd53', // eth sepolia
     
     1: '0xdD6258539c41687B9afd38983c0456493423C73d', // eth mainnet
     8453: '0xcC272c9249d1638B7985eFb84c0E9Cdc001b73F7', // base mainnet
