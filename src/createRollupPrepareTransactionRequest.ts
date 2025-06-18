@@ -58,7 +58,7 @@ export async function createRollupPrepareTransactionRequest<TChain extends Chain
   const chainConfig: ChainConfig = JSON.parse(params.config.chainConfig);
 
   if (isCustomFeeTokenAddress(params.nativeToken)) {
-    // custom fee token is only allowed for anytrust chains
+    // custom fee token is only allowed for anytrust and eigenda chains
     if (!isAnyTrustChainConfig(chainConfig) && !isEigenDAChainConfig(chainConfig)) {
       throw new Error(
         `"params.nativeToken" can only be used on AnyTrust or EigenDA chains. Set "arbitrum.DataAvailabilityCommittee" to "true" or "arbitrum.EigenDA" to "true" in the chain config.`,
