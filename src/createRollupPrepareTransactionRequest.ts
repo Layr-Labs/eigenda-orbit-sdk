@@ -8,6 +8,7 @@ import { validateParentChain } from './types/ParentChain';
 import { isCustomFeeTokenAddress } from './utils/isCustomFeeTokenAddress';
 import { ChainConfig } from './types/ChainConfig';
 import { isAnyTrustChainConfig } from './utils/isAnyTrustChainConfig';
+import { isEigenDAChainConfig } from './utils/isEigenDAChainConfig';
 import { getRollupCreatorAddress } from './utils/getters';
 import { fetchDecimals } from './utils/erc20';
 import { TransactionRequestGasOverrides, applyPercentIncrease } from './utils/gasOverrides';
@@ -57,10 +58,10 @@ export async function createRollupPrepareTransactionRequest<TChain extends Chain
   const chainConfig: ChainConfig = JSON.parse(params.config.chainConfig);
 
   if (isCustomFeeTokenAddress(params.nativeToken)) {
-    // custom fee token is only allowed for anytrust chains
-    if (!isAnyTrustChainConfig(chainConfig)) {
+    // custom fee token is only allowed for anytrust and eigenda chains
+    if (!isAnyTrustChainConfig(chainConfig) && !isEigenDAChainConfig(chainConfig)) {
       throw new Error(
-        `"params.nativeToken" can only be used on AnyTrust chains. Set "arbitrum.DataAvailabilityCommittee" to "true" in the chain config.`,
+        `"params.nativeToken" can only be used on AnyTrust or EigenDA chains. Set "arbitrum.DataAvailabilityCommittee" to "true" or "arbitrum.EigenDA" to "true" in the chain config.`,
       );
     }
 
