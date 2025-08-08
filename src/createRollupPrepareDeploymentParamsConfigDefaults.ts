@@ -1,8 +1,8 @@
 import { parseEther, zeroAddress } from 'viem';
 
-// https://github.com/Layr-Labs/nitro/releases/tag/consensus-eigenda-v32.1
+// https://github.com/Layr-Labs/nitro/releases/tag/consensus-eigenda-v32.2
 export const wasmModuleRoot: `0x${string}` =
-  '0x04a297cdd13254c4c6c26388915d416286daf22f3a20e3ebee10400a3129dd17';
+  '0xc723bd1be9fc564796bd8ce5c158c8b2f55d34afb38303a9fb6a8f0fda376edb';
 
 export const defaults = {
   extraChallengeTimeBlocks: BigInt(0),
