@@ -43,7 +43,6 @@ it('creates chain config with custom params', () => {
       AllowDebugPrecompiles: true,
       DataAvailabilityCommittee: true,
       InitialArbOSVersion: 32,
-      EigenDA: true,
       InitialChainOwner: vitalik,
       GenesisBlockNum: 1,
       MaxCodeSize: 40 * 1024,
